@@ -1,5 +1,5 @@
 BEGIN;
-DROP TABLE IF EXISTS users, users_posts, posts CASCAD;
+DROP TABLE IF EXISTS users, posts CASCADE;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -11,13 +11,8 @@ CREATE TABLE users (
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
     vote INT,
-    text TEXT NOT NULL
-);
-
-CREATE TABLE users_posts (
-    id SERIAL PRIMARY KEY,
-    users_id INT REFERENCES users(id),
-    posts_id INT REFERENCES posts(id) 
+    text TEXT NOT NULL,
+    user_id INT REFERENCES users(id)
 );
 
 
