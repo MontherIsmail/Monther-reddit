@@ -1,8 +1,8 @@
 const postsContainer = document.querySelector(".posts-container");
 fetch("/render")
-.then((res) => res.json())
-.then((posts) => {
-      // console.log(posts);
+  .then((res) => res.json())
+  .then((posts) => {
+    // console.log(posts);
     posts.forEach((postData) => {
       console.log(postData);
       const post = document.createElement("div");
@@ -45,6 +45,7 @@ fetch("/render")
 
       post.setAttribute("class", "post");
       topDown.setAttribute("class", "top-down");
+      upButton.setAttribute("id", "up-vote");
       upImg.setAttribute("alt", "Top");
       downImg.setAttribute("alt", "down");
       downImg.setAttribute("class", "rotate");
@@ -52,7 +53,7 @@ fetch("/render")
       postInfo.setAttribute("class", "post-info");
       infoImg.setAttribute("alt", "Info Image");
       postBody.setAttribute("class", "post-body");
-      postFooter.setAttribute('class', 'post-footer');
+      postFooter.setAttribute("class", "post-footer");
       comments.setAttribute("class", "comments");
       share.setAttribute("class", "share");
       save.setAttribute("class", "save");
@@ -69,4 +70,5 @@ fetch("/render")
       share.textContent = "share";
       save.textContent = "save";
     });
-  }).catch(err => console.log(err))
+  })
+  .catch((err) => console.log(err));
