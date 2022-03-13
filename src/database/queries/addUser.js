@@ -7,4 +7,4 @@ const addUserDB = (name, email, hashedPass) => {
     });
 };
 
-module.exports = addUserDB;
+module.exports = { addUserDB };

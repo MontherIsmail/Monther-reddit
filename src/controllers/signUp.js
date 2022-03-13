@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const signUpSchema = require('../validation');
-const addUserDB = require('../database/queries');
+const { signUpSchema } = require('../validation');
+const { addUserDB } = require('../database/queries');
 
 
 const signUp = (req, res) => {
@@ -14,7 +14,7 @@ const signUp = (req, res) => {
     .then(console.log)
     .then(result => {
         res.cookie('name', req.body.name);
-        res.status(201).cookie('token', token).json({redirect : '/'});
+        res.status(201).cookie('token', token).json({redirect : '/home'});
     })
     .catch(err => console.log(err))
 }
