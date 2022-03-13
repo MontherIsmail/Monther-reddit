@@ -83,11 +83,17 @@
               <button><img src="../assets/top.png" alt="top" /> Top</button>
               <button class="dots"><img src="../assets/dotes.png" alt="dotes" /></button>
             </div>
-            <form method="post">
-                <img src="../assets/user-img.png" alt="user-img" class="user-img">
+            <form method="post" class="post-form">
+                <div class="form-body">
+                  <img src="../assets/user-img.png" alt="user-img" class="user-img">
                 <input type="text" name="post" id="post-input" placeholder="Create Post" required>
                 <img src="../assets/image.png" alt="add-image">
                 <img src="../assets/paper-clip.png" alt="add-file">
+                </div>
+                <div class="form-footer">
+                  <h3 class="message"></h3>
+                  <button type="submit">Post</button>
+                </div>
             </form>
             <div class="post">
                 <div class="top-down">
@@ -227,5 +233,6 @@
 
           </div>
     </section>
+    <script src="../js/addPost.js"></script>
   </body>
 </html>

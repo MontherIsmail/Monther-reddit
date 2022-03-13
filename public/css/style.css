@@ -203,12 +203,42 @@
   form{
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
+      flex-direction: column;
       background-color: var(--posts-color);
       width: 100%;
       margin-bottom: 20px;
       border: solid 0.5px #d2d3d3;
       border-radius: 5px;
+  }
+  .form-footer{
+      width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form-footer h3{
+      margin-left: 200px;
+  }
+  form button{
+    width: 120px;
+    height: 33px;
+    border-radius: 20px;
+    border: solid 1.9px var(--main-color);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: var(--posts-color);
+    margin: 10px;
+  }
+  form .form-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--posts-color);
+    width: 100%;
+    height: 90%;
   }
   form .user-img{
       width: 50px;
