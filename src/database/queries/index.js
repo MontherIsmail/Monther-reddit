@@ -1,4 +1,4 @@
-const addUserDB = require('./addUser');
+const { addUserDB } = require('./addUser');
 const { loginDB } = require('./login');
 
 
