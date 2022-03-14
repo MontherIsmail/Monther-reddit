@@ -27,5 +27,6 @@ postForm.addEventListener("submit", (ele) => {
 
   const clearMessage = setTimeout(() => {
     message.textContent = "";
+    location.reload();
   }, 3000);
 });
