@@ -23,9 +23,7 @@ if (!getCookie("name")) {
   fetch("/renderhome")
     .then((res) => res.json())
     .then((posts) => {
-        console.log(44444, posts);
         posts.forEach((postData) => {
-        console.log(555555555, postData);
         const post = document.createElement("div");
         const topDown = document.createElement("div");
         const upButton = document.createElement("button");
