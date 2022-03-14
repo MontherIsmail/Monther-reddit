@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { signUp, login, routesProtector, renderPostsPub, addPost, upVote, downVote, renderPostsHome } = require('../controllers');
+const { signUp, login, routesProtector, renderPostsPub, addPost, upVote, downVote, renderPostsHome, logout } = require('../controllers');
 
 
 router.get('/render', renderPostsPub);
@@ -11,6 +11,7 @@ router.post('/addpost', addPost);
 router.get('/renderhome', renderPostsHome);
 router.post('/upvote', upVote)
 router.post('/downvote', downVote)
+router.get('/logout', logout)
 
 
 
