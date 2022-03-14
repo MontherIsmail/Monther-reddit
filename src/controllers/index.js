@@ -4,6 +4,6 @@ const { renderPostsPub } = require('./renderPostsPub');
 const { addPost } = require('./addPost');
 const { upVote } = require('./upVote');
 const { downVote } = require('./downVote');
+const { renderPostsHome } = require('./renderPostsHome');
 
-
-module.exports = { signUp, login, renderPostsPub, addPost, upVote, downVote };
+module.exports = { signUp, login, renderPostsPub, addPost, upVote, downVote, renderPostsHome };

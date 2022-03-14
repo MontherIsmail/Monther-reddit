@@ -3,6 +3,7 @@
         "addpost",
         "downvote",
         "monther",
+        "renderhome",
         "upvote"
     ]
 }
