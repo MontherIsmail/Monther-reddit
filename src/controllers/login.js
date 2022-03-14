@@ -22,7 +22,7 @@ const login = (req, res) => {
             const token = jwt.sign(userData.name, "secretKey");
             res.cookie("id", userData.id);
             res.cookie("name", userData.name);
-            res.status(200).cookie("token", token).json({ redirect: "/home" });
+            res.status(200).cookie("token", token).json({ redirect: "/" });
           }
         });
       }

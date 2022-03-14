@@ -22,7 +22,7 @@ form.addEventListener("submit", (ele) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.redirect) {
-        window.location = "/home.html";
+        window.location = "./home.html";
       } else {
         error.textContent = data.msg;
       }
