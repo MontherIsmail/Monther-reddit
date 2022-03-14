@@ -1,8 +1,8 @@
-const { renderPostsPubDB } = require('../database/queries');
+const { renderPostsDB } = require('../database/queries');
 
 const renderPostsPub = (req, res) => {
     console.log('monther');
-    renderPostsPubDB()
+    renderPostsDB()
     .then(data => res.json(data.rows))
     .catch(err => res.json(err));
 };
