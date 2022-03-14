@@ -4,6 +4,7 @@ const { renderPostsDB } = require('./renderPostsDB');
 const { addPostDB } = require('./addPostDB');
 const { upVoteDB } = require('./upVoteDB');
 const { downVoteDB } = require('./downVoteDB');
+const { deletePostDB } = require('./deletePostDB');
 
 
-module.exports = { addUserDB, loginDB, renderPostsDB, addPostDB, upVoteDB, downVoteDB };
+module.exports = { addUserDB, loginDB, renderPostsDB, addPostDB, upVoteDB, downVoteDB, deletePostDB };

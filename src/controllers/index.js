@@ -7,5 +7,6 @@ const { upVote } = require('./upVote');
 const { downVote } = require('./downVote');
 const { renderPostsHome } = require('./renderPostsHome');
 const { logout } = require('./logout');
+const { deletePost } = require('./deletePost');
 
-module.exports = { signUp, login, routesProtector, renderPostsPub, addPost, upVote, downVote, renderPostsHome, logout };
+module.exports = { signUp, login, routesProtector, renderPostsPub, addPost, upVote, downVote, renderPostsHome, logout, deletePost };
