@@ -14,7 +14,7 @@ const signUp = (req, res) => {
     .then(console.log)
     .then(result => {
         res.cookie('name', req.body.name);
-        res.status(201).cookie('token', token).json({redirect : '/home'});
+        res.status(201).cookie('token', token).json({redirect : '/'});
     })
     .catch(err => console.log(err))
 }

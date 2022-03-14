@@ -24,7 +24,7 @@
         <i class="fa fa-search"></i>
         <input type="text" placeholder="Search Reddit" />
       </div>
-      <h4>Username</h4>
+      <h4 id="cookie">Username</h4>
       <div class="reges">
         <button class="signup">log Out</button>
       </div>
@@ -105,157 +105,12 @@
             <button type="submit">Post</button>
           </div>
         </form>
-        <div class="post">
-          <div class="top-down">
-            <button>
-              <img src="../assets/top.png" alt="top" id="up-vote" />
-            </button>
-            <p id="vote">22k</p>
-            <button>
-              <img
-                src="../assets/top.png"
-                alt="down"
-                class="rotate"
-                id="down-vote"
-              />
-            </button>
-          </div>
-          <div class="main-post">
-            <div class="post-info">
-              <img src="../assets/user-img.png" alt="user-img" />
-              <h5>montherismail</h5>
-              <p>Posted byu/Next-Data-7032 5 hours ago</p>
-              <button>Join</button>
-            </div>
-            <div class="post-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam,
-                provident!
-              </p>
-            </div>
-            <div class="post-footer">
-              <button class="comments">comments</button>
-              <button class="share">share</button>
-              <button class="save">save</button>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="top-down">
-            <button><img src="../assets/top.png" alt="top" /></button>
-            <p>22k</p>
-            <button>
-              <img src="../assets/top.png" alt="top" class="rotate" />
-            </button>
-          </div>
-          <div class="main-post">
-            <div class="post-info">
-              <img src="../assets/user-img.png" alt="user-img" />
-              <h5>montherismail</h5>
-              <p>Posted byu/Next-Data-7032 5 hours ago</p>
-              <button>Join</button>
-            </div>
-            <div class="post-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam,
-                provident!
-              </p>
-            </div>
-            <div class="post-footer">
-              <button class="comments">comments</button>
-              <button class="share">share</button>
-              <button class="save">save</button>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="top-down">
-            <button><img src="../assets/top.png" alt="top" /></button>
-            <p>22k</p>
-            <button>
-              <img src="../assets/top.png" alt="top" class="rotate" />
-            </button>
-          </div>
-          <div class="main-post">
-            <div class="post-info">
-              <img src="../assets/user-img.png" alt="user-img" />
-              <h5>montherismail</h5>
-              <p>Posted byu/Next-Data-7032 5 hours ago</p>
-              <button>Join</button>
-            </div>
-            <div class="post-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam,
-                provident!
-              </p>
-            </div>
-            <div class="post-footer">
-              <button class="comments">comments</button>
-              <button class="share">share</button>
-              <button class="save">save</button>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="top-down">
-            <button><img src="../assets/top.png" alt="top" /></button>
-            <p>22k</p>
-            <button>
-              <img src="../assets/top.png" alt="top" class="rotate" />
-            </button>
-          </div>
-          <div class="main-post">
-            <div class="post-info">
-              <img src="../assets/user-img.png" alt="user-img" />
-              <h5>montherismail</h5>
-              <p>Posted byu/Next-Data-7032 5 hours ago</p>
-              <button>Join</button>
-            </div>
-            <div class="post-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam,
-                provident!
-              </p>
-            </div>
-            <div class="post-footer">
-              <button class="comments">comments</button>
-              <button class="share">share</button>
-              <button class="save">save</button>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="top-down">
-            <button><img src="../assets/top.png" alt="top" /></button>
-            <p>22k</p>
-            <button>
-              <img src="../assets/top.png" alt="top" class="rotate" />
-            </button>
-          </div>
-          <div class="main-post">
-            <div class="post-info">
-              <img src="../assets/user-img.png" alt="user-img" />
-              <h5>montherismail</h5>
-              <p>Posted byu/Next-Data-7032 5 hours ago</p>
-              <button>Join</button>
-            </div>
-            <div class="post-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam,
-                provident!
-              </p>
-            </div>
-            <div class="post-footer">
-              <button class="comments">comments</button>
-              <button class="share">share</button>
-              <button class="save">save</button>
-            </div>
-          </div>
-        </div>
+        <div class="posts-container"></div>
       </div>
     </section>
+    <script src="../js/renderPostsHome.js"></script>
     <script src="../js/addPost.js"></script>
-    <script src="../js/upVote.js"></script>
-    <script src="../js/downVote.js"></script>
+    <!-- <script src="../js/upVote.js"></script>
+    <script src="../js/downVote.js"></script> -->
   </body>
 </html>

@@ -2,7 +2,6 @@ const postsContainer = document.querySelector(".posts-container");
 fetch("/render")
   .then((res) => res.json())
   .then((posts) => {
-    // console.log(posts);
     posts.forEach((postData) => {
       console.log(postData);
       const post = document.createElement("div");
