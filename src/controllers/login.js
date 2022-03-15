@@ -19,8 +19,7 @@ const login = (req, res) => {
           if (!isMatch) {
             res.status(400).json({ message: "Incorrect Name Or Password" });
           } else {
-            const token = jwt.sign(userData.name, "secretKey");
-            res.cookie("id", userData.id);
+            const token = jwt.sign({ id: userData.id,name: userData.name}, "secretKey");
             res.cookie("name", userData.name);
             res.status(200).cookie("token", token).json({ redirect: "/" });
           }
