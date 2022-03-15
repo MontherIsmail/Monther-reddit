@@ -2,6 +2,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const loginSchema = require("../validation/login.schema");
 const { loginDB } = require("../database/queries");
+const { customErr } = require('../errors');
 
 const login = (req, res) => {
   const { email, password } = req.body;
@@ -11,13 +12,11 @@ const login = (req, res) => {
     .then((result) => result.rows[0])
     .then((userData) => {
       if (userData === undefined) {
-        res.status(400).json({
-          message: "User Dosen't Exist",
-        });
+        throw customErr("User Dosen't Exist", 409);
       } else {
         bcrypt.compare(password, userData.password).then((isMatch) => {
           if (!isMatch) {
-            res.status(400).json({ message: "Incorrect Name Or Password" });
+            throw customErr("Incorrect Name Or Password", 409);
           } else {
             const token = jwt.sign({ id: userData.id,name: userData.name}, "secretKey");
             res.cookie("name", userData.name);
@@ -26,7 +25,7 @@ const login = (req, res) => {
         });
       }
     })
-    .catch((err) => res.status(400).json({ message: err.message }));
+    .catch((err) => err.details ? next(customErr('Input Is Invalid', 400)) : next(err));
 };
 
 module.exports = login;

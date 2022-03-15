@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { signUp, login, routesProtector, renderPostsPub, addPost, upVote, downVote, renderPostsHome, deletePost, logout } = require('../controllers');
-
+const { signUp, login, routesProtector, renderPostsPub, addPost, upVote, downVote, renderPostsHome, deletePost, logout,  } = require('../controllers');
+const { notFoundErr, serverErr } = require('../errors');
 
 router.get('/render', renderPostsPub);
 router.post('/signup', signUp);
@@ -13,6 +13,8 @@ router.post('/upvote', upVote);
 router.post('/downvote', downVote);
 router.delete('/deletepost/:post_id', deletePost);
 router.get('/logout', logout);
+router.use(notFoundErr);
+router.use(serverErr);
 
 
 

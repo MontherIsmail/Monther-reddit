@@ -1,4 +1,5 @@
-const { getUserOfPostDB, deletePostDB } = require("../database/queries");
+const { deletePostDB } = require('../database/queries');
+const { customErr } = require('../errors');
 
 const deletePost = (req, res) => {
   const { post_id } = req.params;
@@ -12,7 +13,7 @@ const deletePost = (req, res) => {
         res.json({ message: "not deleted" });
       }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => err.details ? next(customErr('Something Wrong', 409)) : next(err));
 };
 
 module.exports = { deletePost };
