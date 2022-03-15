@@ -1,9 +1,11 @@
 const { addPostDB } = require('../database/queries');
 
 const addPost = (req, res) => {
-    const { text, user_id } = req.body;
-    addPostDB(text, user_id)
-    .catch(err => console.log(err));
+    const { value } = req.body;
+    const user_id = req.id;
+    addPostDB(value, user_id)
+    .then(data => res.json({message: 'post added'}))
+    .catch((err) => console.log(22, err));
 };
 
 module.exports = { addPost };

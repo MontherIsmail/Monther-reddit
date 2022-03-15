@@ -11,7 +11,7 @@ router.post('/addpost', addPost);
 router.get('/renderhome', renderPostsHome);
 router.post('/upvote', upVote);
 router.post('/downvote', downVote);
-router.post('/deletepost', deletePost);
+router.delete('/deletepost/:post_id', deletePost);
 router.get('/logout', logout);
 
 

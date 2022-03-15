@@ -5,6 +5,7 @@ const routesProtector = (req, res, next) => {
     if (err) {
       res.status(401).json({ msg: 'not auth' });
     } else {
+      req.id = decoded.id;
       next();
     }
   });
