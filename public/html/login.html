@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:wght@200;300;400&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/login.signup.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png" />
+    <link rel="stylesheet" href="../css/login.signup.css" />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <img src="../assets/login.PNG" alt="login background">
+      <img src="../assets/login.PNG" alt="login background" />
 
-        <div class="form-body">
-            <h4>Login</h4>
-            <p class="text">By continuing, you agree to our <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>.</p>
-            <div class="gmail">
-                <img src="../assets/google.png" alt="google">
-                <p>Continue With Google</p>
-            </div>
-            <div class="gmail">
-                <img src="../assets/apple.png" alt="apple">
-                <p>Continue With Apple</p>
-            </div>
-            <div class="or">
-                <hr>OR<hr>
-            </div>
-            <form method="post" class="form">
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <input type="password" name="password" id="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-                <p class="error"></p>
-            </form>
-            <p class="forget">Forgot your <a>username</a> or <a>password</a> ?</p>
-            <h5>New to Reddit? <a href="./signup.html">SIGN UP</a></h5>
+      <div class="form-body">
+        <h4>Login</h4>
+        <p class="text">
+          By continuing, you agree to our <a href="#">User Agreement</a> and
+          <a href="#">Privacy Policy</a>.
+        </p>
+        <div class="gmail">
+          <img src="../assets/google.png" alt="google" />
+          <p>Continue With Google</p>
         </div>
+        <div class="gmail">
+          <img src="../assets/apple.png" alt="apple" />
+          <p>Continue With Apple</p>
+        </div>
+        <div class="or">
+          <hr />
+          OR
+          <hr />
+        </div>
+        <form method="post" class="form">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+          <p class="error"></p>
+        </form>
+        <p class="forget">Forgot your <a>username</a> or <a>password</a> ?</p>
+        <h5>New to Reddit? <a href="./signup.html">SIGN UP</a></h5>
+      </div>
     </div>
     <script src="../js/login.js"></script>
-</body>
+  </body>
 </html>
