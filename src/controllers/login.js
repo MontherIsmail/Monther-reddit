@@ -18,8 +18,7 @@ const login = (req, res) => {
           if (!isMatch) {
             throw customErr("Incorrect Name Or Password", 409);
           } else {
-            const token = jwt.sign(userData.name, "secretKey");
-            res.cookie("id", userData.id);
+            const token = jwt.sign({ id: userData.id,name: userData.name}, "secretKey");
             res.cookie("name", userData.name);
             res.status(200).cookie("token", token).json({ redirect: "/" });
           }

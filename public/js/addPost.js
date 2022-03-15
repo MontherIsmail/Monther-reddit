@@ -5,10 +5,7 @@ const message = document.querySelector(".message");
 postForm.addEventListener("submit", (ele) => {
   ele.preventDefault();
 
-  const postData = {
-    user_id: 1,
-    text: postInput.value,
-  };
+  const { value } = postInput;
 
   fetch("/addpost", {
     method: "POST",
@@ -16,7 +13,7 @@ postForm.addEventListener("submit", (ele) => {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(postData),
+    body: JSON.stringify({ value }),
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));

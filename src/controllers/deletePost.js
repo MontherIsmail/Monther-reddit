@@ -2,11 +2,18 @@ const { deletePostDB } = require('../database/queries');
 const { customErr } = require('../errors');
 
 const deletePost = (req, res) => {
-    const { post_id } = req.body;
+  const { post_id } = req.params;
+  const { id } = req;
 
-    deletePostDB(post_id)
-    .then(data => res.json(data.rows))
-    .catch(err => err.details ? next(customErr('Something Wrong', 409)) : next(err));
+  deletePostDB(post_id, id)
+    .then((data) => {
+      if (data.rowCount === 0) {
+        res.json({ message: "deleted" });
+      } else {
+        res.json({ message: "not deleted" });
+      }
+    })
+    .catch((err) => err.details ? next(customErr('Something Wrong', 409)) : next(err));
 };
 
 module.exports = { deletePost };

@@ -1,9 +1,9 @@
 const connection = require('../config/connection');
 
-const deletePostDB = (post_id) => {
+const deletePostDB = (post_id, user_id) => {
     return connection.query({
-        text : 'DELETE FROM posts WHERE id = ($1)',
-        values : [post_id]
+        text : 'DELETE FROM posts WHERE id = ($1) AND user_id = ($2)',
+        values : [post_id, user_id]
     })
 }
 
