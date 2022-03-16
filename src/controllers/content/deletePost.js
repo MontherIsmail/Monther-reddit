@@ -1,5 +1,5 @@
-const { deletePostDB } = require('../database/queries');
-const { customErr } = require('../errors');
+const { deletePostDB } = require('../../database/queries/queryContent');
+const { customErr } = require('../../errors');
 
 const deletePost = (req, res) => {
   const { post_id } = req.params;

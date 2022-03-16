@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { signUp, login, routesProtector, renderPostsPub, addPost, upVote, downVote, renderPostsHome, deletePost, logout,  } = require('../controllers');
+const { upVote, downVote } = require('../controllers');
+const { signUp, login, logout, routesProtector } = require('../controllers/Auth');
+const { renderPostsPub, renderPostsHome, addPost, deletePost } = require('../controllers/content');
 const { notFoundErr, serverErr } = require('../errors');
 
 router.get('/render', renderPostsPub);

@@ -1,5 +1,5 @@
-const { addPostDB } = require('../database/queries');
-const { customErr } = require('../errors');
+const { addPostDB } = require('../../database/queries/queryContent');
+const { customErr } = require('../../errors');
 
 const addPost = (req, res) => {
     const { value } = req.body;

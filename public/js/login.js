@@ -1,7 +1,6 @@
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const form = document.querySelector('.form');
-const error = document.querySelector('.error')
 
 form.addEventListener('submit', (ele) => {
     ele.preventDefault();
@@ -19,10 +18,11 @@ form.addEventListener('submit', (ele) => {
     })
     .then(res => res.json())
     .then(data => {
+        console.log('data',data);
         if(data.redirect){
             window.location = './home.html';
         }else{
-            error.textContent = data.msg;
+            swal( 'error',data.message ,'error');
         }
     })
 })
