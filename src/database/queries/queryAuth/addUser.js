@@ -1,4 +1,4 @@
-const connection = require('../config/connection');
+const connection = require('../../config/connection');
 
 const addUserDB = (name, email, hashedPass) => {
    return connection.query({

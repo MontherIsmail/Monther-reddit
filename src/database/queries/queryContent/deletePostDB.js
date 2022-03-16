@@ -1,4 +1,4 @@
-const connection = require('../config/connection');
+const connection = require('../../config/connection');
 
 const deletePostDB = (post_id, user_id) => {
     return connection.query({

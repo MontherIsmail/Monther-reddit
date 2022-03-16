@@ -1,5 +1,5 @@
-const { renderPostsDB } = require('../database/queries');
-const { customErr } = require('../errors');
+const { renderPostsDB } = require('../../database/queries/queryContent');
+const { customErr } = require('../../errors');
 
 const renderPostsPub = (req, res) => {
     console.log('monther');

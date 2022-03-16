@@ -1,10 +1,10 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const loginSchema = require("../validation/login.schema");
-const { loginDB } = require("../database/queries");
-const { customErr } = require('../errors');
+const loginSchema = require("../../validation/login.schema");
+const { loginDB } = require("../../database/queries/queryAuth");
+const { customErr } = require('../../errors');
 
-const login = (req, res) => {
+const login = (req, res, next) => {
   const { email, password } = req.body;
   loginSchema
     .validateAsync(req.body)
@@ -22,10 +22,23 @@ const login = (req, res) => {
             res.cookie("name", userData.name);
             res.status(200).cookie("token", token).json({ redirect: "/" });
           }
-        });
+        })
+        .catch(err => {
+          if (err){
+            next(customErr(err, 409))
+          }else{
+            next(err)
+          }
+        })
       }
     })
-    .catch((err) => err.details ? next(customErr('Input Is Invalid', 400)) : next(err));
+    .catch((err) => {
+      if(err){
+        next(customErr('Incorrect Name Or Password', 400))
+      }else{
+        next(err);
+      }
+  });
 };
 
-module.exports = login;
+module.exports = { login };

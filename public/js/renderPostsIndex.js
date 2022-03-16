@@ -16,6 +16,11 @@ fetch("/render")
       const infoImg = document.createElement("img");
       const userName = document.createElement("h5");
       const joinButton = document.createElement("button");
+
+      joinButton.addEventListener('click', () =>{
+        window.location = './html/login.html';
+      });
+      
       const postBody = document.createElement("div");
       const postFooter = document.createElement("div");
       const postText = document.createElement("p");

@@ -1,4 +1,4 @@
-const connection = require('../config/connection');
+const connection = require('../../config/connection');
 
 const addPostDB = (text, user_id) => {
     return connection.query({

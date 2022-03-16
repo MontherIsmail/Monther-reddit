@@ -1,4 +1,4 @@
-const { renderPostsDB } =require('../database/queries');
+const { renderPostsDB } =require('../../database/queries/queryContent');
 
 const renderPostsHome = (req, res) => {
     renderPostsDB()
