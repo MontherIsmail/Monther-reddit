@@ -12,8 +12,6 @@ router.post('/login', login);
 router.use(routesProtector);
 router.post('/addpost', addPost);
 router.get('/renderhome', renderPostsHome);
-router.post('/upvote', upVote);
-router.post('/downvote', downVote);
 router.delete('/deletepost/:post_id', deletePost);
 router.get('/logout', logout);
 router.use(notFoundErr);
