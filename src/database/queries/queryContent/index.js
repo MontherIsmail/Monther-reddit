@@ -1,5 +1,5 @@
-const { addPostDB } = require('./addPostDB');
-const { renderPostsDB } = require('./renderPostsDB');
-const { deletePostDB } = require('./deletePostDB');
+const {addPostDB} = require('./addPostDB');
+const {renderPostsDB} = require('./renderPostsDB');
+const {deletePostDB} = require('./deletePostDB');
 
-module.exports = { renderPostsDB, addPostDB, deletePostDB };
+module.exports = {renderPostsDB, addPostDB, deletePostDB};
