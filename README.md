@@ -21,7 +21,7 @@
 ## 👉🏻 **Links** <span id='links'></span>
 
 - [Github link](https://github.com/GSG-G11/Monther-reddit)
-- [Demo link](https://mini-reddit-monther.herokuapp.com/)
+- [Demo link](https://monther-reddit-mini.herokuapp.com/)
 
 
 ## 👉🏻 **Features** <span id='features'></span>
