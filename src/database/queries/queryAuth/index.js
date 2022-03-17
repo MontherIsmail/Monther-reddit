@@ -1,5 +1,5 @@
-const { addUserDB } = require('./addUser');
-const { checkEmail } = require('./checkEmail');
-const { loginDB } = require('./login');
+const {addUserDB} = require('./addUser');
+const {checkEmail} = require('./checkEmail');
+const {loginDB} = require('./login');
 
-module.exports = { addUserDB, checkEmail, loginDB };
+module.exports = {addUserDB, checkEmail, loginDB};

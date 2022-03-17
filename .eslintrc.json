@@ -6,12 +6,11 @@
         "node": true
     },
     "extends": [
-        "airbnb-base"
+        "google"
     ],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
     "rules": {
-        "no-console" : 0
     }
 }
