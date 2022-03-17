@@ -1,4 +1,5 @@
 const {renderPostsDB} =require('../../database/queries/queryContent');
+const {customErr} = require('../../errors');
 
 const renderPostsHome = (req, res) => {
   renderPostsDB()
