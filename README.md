@@ -2,8 +2,7 @@
 
 ## Topic Title
 
-- [Links](#schema)
-- [Links](#links)
+- [schema](#schema)
 - [Links](#links)
 - [Features](#features)
 - [Built with](#built)
@@ -23,6 +22,17 @@
 - [Github link](https://github.com/GSG-G11/Monther-reddit)
 - [Demo link](https://monther-reddit-mini.herokuapp.com)
 
+## 👉🏻 **Please Use Email and password This** <span id='to-login'></span>
+
+ <p>
+    <small>email: </small>
+    <strong>zayn@gmail.com</strong>
+</p>
+<p>
+     <small>password: </small>
+    <strong>123456789</strong>
+</p>
+    
 
 ## 👉🏻 **Features** <span id='features'></span>
 
@@ -55,22 +65,6 @@
 - _As a user_, I should be able to Vote up or down in all posts.
 - _As a user_, I will see my name in navbar.
 - _As a user_, I should see owner of post in the top of the post..
-
-
-
-
-
-## 👉🏻 **Please Use Email and password This** <span id='to-login'></span>
-
- <p>
-    <small>email: </small>
-    <strong>zayn@gmail.com</strong>
-</p>
-<p>
-     <small>password: </small>
-    <strong>123456789</strong>
-</p>
-    
 
 ---
 
